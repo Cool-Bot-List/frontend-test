@@ -25,17 +25,19 @@ function App() {
   return (
     <>
       {!loading ? (
-        <Navbar>
-          <NavItem icon="😉" />
-          <NavItem icon="😉" />
-          <NotificationButton user={user} />
-          <NavItem icon={<img src={user.avatarUrl} alt="user" className="icon-button" />}>
-            <DropdownMenu user={user} bots={bots} />
-          </NavItem>
-        </Navbar>
+        <div style={{ height: "115vh" }}>
+          <Navbar>
+            <NavItem icon="😉" />
+            <NavItem icon="😉" />
+            <NotificationButton user={user} />
+            <NavItem icon={<img src={user.avatarUrl} alt="user" className="icon-button" />}>
+              <DropdownMenu user={user} bots={bots} />
+            </NavItem>
+          </Navbar>
+          <button className="button"> Submit Bot </button>
+          <Form />
+        </div>
       ) : null}
-      <button className="button"> Submit Bot </button>
-      <Form />
     </>
   );
 }

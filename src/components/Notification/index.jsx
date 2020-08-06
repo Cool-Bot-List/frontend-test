@@ -116,9 +116,23 @@ const NotificationDropdownMenu = ({ notifications, user }) => {
             notifications
               .filter((e) => e.read === false)
               .map((n) => (
-                <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
-                  {n.message}
-                </NotificationDropdownMenuItem>
+                <>
+                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                    {n.message}
+                  </NotificationDropdownMenuItem>
+                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                    {n.message}
+                  </NotificationDropdownMenuItem>
+                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                    {n.message}
+                  </NotificationDropdownMenuItem>
+                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                    {n.message}
+                  </NotificationDropdownMenuItem>
+                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                    {n.message}
+                  </NotificationDropdownMenuItem>
+                </>
               ))}
 
           <NotificationDropdownMenuItem leftIcon={<NotificationsOff />} rightIcon="➡" goToMenu="read-notifications">

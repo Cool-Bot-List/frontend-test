@@ -104,6 +104,20 @@ a {
   color: white;
 }
 
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #3b3c41;
+}
 .dropdown {
   position: absolute;
   top: 58px;
@@ -114,7 +128,11 @@ a {
   border-radius: var(--border-radius);
   padding: 1rem;
   overflow: hidden;
+  max-height: 75%;
   transition: height var(--speed) ease;
+}
+.dropdown:hover {
+  overflow-y: auto;
 }
 .te {
   font-weight: 700 !important;
