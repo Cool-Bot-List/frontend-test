@@ -16,6 +16,7 @@ export const NotificationButton = ({ user }) => {
   useEffect(() => {
     (async function () {
       const notis = await getNoti(user.id);
+      notis.reverse();
       setNotifications(notis);
       setLoading(false);
     })();
@@ -23,7 +24,7 @@ export const NotificationButton = ({ user }) => {
 
   io.on("new-notification", (user) => {
     console.log("emited new-notification");
-    setNotifications(user.notifications);
+    setNotifications(user.setNotifications);
   });
   io.on("notification-update", (user) => {
     console.log("emited notification-update");
