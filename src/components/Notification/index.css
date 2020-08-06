@@ -1,0 +1,66 @@
+.notification-number {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 900 !important;
+}
+.MuiBadge-colorSecondary {
+  color: rgba(0, 0, 0, 0.87) !important;
+  background-color: #f48fb1 !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.notification-heading {
+  position: relative;
+  left: 10px;
+  padding: 10px 2px;
+}
+.icon-test {
+  --button-size: calc(var(--nav-size) * 0.7);
+  width: var(--button-size);
+  height: var(--button-size);
+  font-size: 24px;
+  background-color: #373939;
+  border-radius: 50%;
+  padding: 3px;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+.icon-test:hover {
+  background-color: #4c4d4d !important;
+}
+.done-icon {
+  font-size: 35px !important;
+  padding: 10px;
+}
+.MuiTooltip-popper {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  width: 140px !important;
+  text-align: center !important;
+  font-size: 40px !important;
+  color: red !important;
+}
+.notification-mark-all-read-container {
+  display: flex;
+  justify-content: center;
+}
+.notification-mark-all-read-item {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+  margin-bottom: 10px !important;
+  width: 90% !important;
+  transition: all 300ms !important;
+}
+.notification-mark-all-read-item:hover {
+  background-color: #2e3033 !important;
+}
+.notification-mark-all-read-icon {
+  width: 35px !important;
+  height: 35px !important;
+  position: relative;
+  bottom: 2px;
+}
