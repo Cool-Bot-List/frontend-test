@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       {!loading ? (
-        <div style={{ height: "115vh" }}>
+        <>
           <Navbar>
             <NavItem icon="😉" />
             <NavItem icon="😉" />
@@ -36,7 +36,7 @@ function App() {
           </Navbar>
           <button className="button"> Submit Bot </button>
           <Form />
-        </div>
+        </>
       ) : null}
     </>
   );
@@ -44,29 +44,27 @@ function App() {
 
 function DropdownMenu({ user, bots }) {
   const [activeMenu, setActiveMenu] = useState("main");
+  const [menuHeight, setMenuHeight] = useState(null);
+
+  function calcHeight(el) {
+    setMenuHeight(el.offsetHeight); // el.offsetHeight it the current height of the DOM element
+  }
 
   function DropdownItem(props) {
     return (
-      <>
-        <a href="#" className="te" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <List component="nav">
+        <ListItem button className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
           <span className="icon-button circle">{props.leftIcon}</span>
+
           {props.children}
           <span className="icon-right">{props.rightIcon}</span>
-        </a>
-        <List component="nav">
-          <ListItem button className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-            <span className="icon-button circle">{props.leftIcon}</span>
-
-            {props.children}
-            <span className="icon-right">{props.rightIcon}</span>
-          </ListItem>
-        </List>
-      </>
+        </ListItem>
+      </List>
     );
   }
   return (
-    <div className="dropdown">
-      <CSSTransition in={activeMenu === "main"} unmountOnExit timeout={500} classNames="menu-primary">
+    <div className="dropdown" style={{ height: menuHeight }}>
+      <CSSTransition in={activeMenu === "main"} unmountOnExit timeout={500} classNames="menu-primary" onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem leftIcon={<img src={user.avatarUrl} alt="logo" className="icon-button" />}>My Profile</DropdownItem>
 
@@ -78,7 +76,7 @@ function DropdownMenu({ user, bots }) {
         </div>
       </CSSTransition>
 
-      <CSSTransition in={activeMenu === "bots"} unmountOnExit timeout={500} classNames="menu-secondary">
+      <CSSTransition in={activeMenu === "bots"} unmountOnExit timeout={500} classNames="menu-secondary" onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem goToMenu="main" leftIcon="⬅">
             <h1>Bots</h1>

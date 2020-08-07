@@ -51,6 +51,11 @@ const NotificationIcon = ({ count }) => {
 const NotificationDropdownMenu = ({ notifications, user }) => {
   const [activeMenu, setActiveMenu] = useState("main");
   const [showAll, setShowAll] = useState(true);
+  const [menuHeight, setMenuHeight] = useState(null);
+
+  function calcHeight(el) {
+    setMenuHeight(el.offsetHeight); // el.offsetHeight it the current height of the DOM element
+  }
 
   const NotificationDropdownMenuItem = (props) => {
     const [showToolTip, setShowToolTip] = useState(null);
@@ -96,8 +101,8 @@ const NotificationDropdownMenu = ({ notifications, user }) => {
     ) : null;
   };
   return (
-    <div className="dropdown">
-      <CSSTransition in={activeMenu === "main"} unmountOnExit timeout={500} classNames="menu-primary">
+    <div className="dropdown" style={{ height: menuHeight }}>
+      <CSSTransition in={activeMenu === "main"} unmountOnExit timeout={500} classNames="menu-primary" onEnter={calcHeight}>
         <div className="menu">
           <div className="notification-mark-all-read-container">
             <Chip
@@ -117,23 +122,9 @@ const NotificationDropdownMenu = ({ notifications, user }) => {
             notifications
               .filter((e) => e.read === false)
               .map((n) => (
-                <>
-                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
-                    {n.message}
-                  </NotificationDropdownMenuItem>
-                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
-                    {n.message}
-                  </NotificationDropdownMenuItem>
-                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
-                    {n.message}
-                  </NotificationDropdownMenuItem>
-                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
-                    {n.message}
-                  </NotificationDropdownMenuItem>
-                  <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
-                    {n.message}
-                  </NotificationDropdownMenuItem>
-                </>
+                <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                  {n.message}
+                </NotificationDropdownMenuItem>
               ))}
 
           <NotificationDropdownMenuItem leftIcon={<NotificationsOff />} rightIcon="➡" goToMenu="read-notifications">
@@ -142,7 +133,7 @@ const NotificationDropdownMenu = ({ notifications, user }) => {
         </div>
       </CSSTransition>
 
-      <CSSTransition in={activeMenu === "read-notifications"} unmountOnExit timeout={500} classNames="menu-secondary">
+      <CSSTransition in={activeMenu === "read-notifications"} unmountOnExit timeout={500} classNames="menu-secondary" onEnter={calcHeight}>
         <div className="menu">
           <NotificationDropdownMenuItem goToMenu="main" leftIcon="⬅">
             <h1>Read Notifications</h1>
