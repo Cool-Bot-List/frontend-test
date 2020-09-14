@@ -40,16 +40,18 @@ export const MobilePage = () => {
               <ul></ul>
             </nav>
 
-            <div className="mobile-nav-card" id="mobile-nav-card-profile">
-              <img src={avatarUrl} className="mobile-nav-card-icon" />
-              <h1>Profile</h1>
-              <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
-            </div>
+            <div className="mobile-nav-card-container">
+              <div className="mobile-nav-card" id="mobile-nav-card-profile">
+                <img src={avatarUrl} className="mobile-nav-card-icon" />
+                <h1>Profile</h1>
+                <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
+              </div>
 
-            <div className="mobile-nav-card" id="mobile-nav-card-notifications">
-              <NotificationIcon className="mobile-nav-card-icon" id="noti-icon" />
-              <h1>Notis</h1>
-              <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
+              <div className="mobile-nav-card" id="mobile-nav-card-notifications">
+                <NotificationIcon className="mobile-nav-card-icon" id="noti-icon" />
+                <h1>Notis</h1>
+                <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
+              </div>
             </div>
           </div>
         </ClickAwayListener>
