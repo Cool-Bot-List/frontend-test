@@ -1,12 +1,12 @@
 .notification-number {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 900 !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
 }
 .MuiBadge-colorSecondary {
-  color: rgba(0, 0, 0, 0.87) !important;
-  background-color: #f48fb1 !important;
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600 !important;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f48fb1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 .notification-heading {
@@ -29,38 +29,38 @@
   transition: 300ms;
 }
 .icon-test:hover {
-  background-color: #4c4d4d !important;
+  background-color: #4c4d4d;
 }
 .done-icon {
-  font-size: 35px !important;
+  font-size: 35px;
   padding: 10px;
 }
 .MuiTooltip-popper {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600 !important;
-  width: 140px !important;
-  text-align: center !important;
-  font-size: 40px !important;
-  color: red !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  width: 140px;
+  text-align: center;
+  font-size: 40px;
+  color: red;
 }
 .notification-mark-all-read-container {
   display: flex;
   justify-content: center;
 }
 .notification-mark-all-read-item {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 17px !important;
-  margin-bottom: 10px !important;
-  width: 90% !important;
-  transition: all 300ms !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 10px;
+  width: 90%;
+  transition: all 300ms;
 }
 .notification-mark-all-read-item:hover {
-  background-color: #2e3033 !important;
+  background-color: #2e3033;
 }
 .notification-mark-all-read-icon {
-  width: 35px !important;
-  height: 35px !important;
+  width: 35px;
+  height: 35px;
   position: relative;
   bottom: 2px;
 }

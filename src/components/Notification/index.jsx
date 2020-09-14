@@ -2,9 +2,8 @@ import { Badge, List, ListItem, Tooltip, Chip } from "@material-ui/core";
 import { Done as DoneIcon, Notifications as NotificationLogo, NotificationsOff, Close as CloseIcon } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import { NavItem } from "../../App";
+import { NavItem } from "../../pages/main";
 import { io } from "../../ws";
-
 import "./index.css";
 import { getNoti } from "../../util/noti/getNoti";
 import { updateNoti } from "../../util/noti/updateNoti";
@@ -122,7 +121,12 @@ const NotificationDropdownMenu = ({ notifications, user }) => {
             notifications
               .filter((e) => e.read === false)
               .map((n) => (
-                <NotificationDropdownMenuItem toolTipTitle="Mark As Read" action="read" message={n.message} leftIcon={<DoneIcon className="done-icon" />}>
+                <NotificationDropdownMenuItem
+                  toolTipTitle="Mark As Read"
+                  action="read"
+                  message={n.message}
+                  leftIcon={<DoneIcon className="done-icon" />}
+                >
                   {n.message}
                 </NotificationDropdownMenuItem>
               ))}
@@ -141,7 +145,12 @@ const NotificationDropdownMenu = ({ notifications, user }) => {
           {notifications
             .filter((e) => e.read === true)
             .map((n) => (
-              <NotificationDropdownMenuItem toolTipTitle="Mark As Unread" action="unread" message={n.message} leftIcon={<CloseIcon className="done-icon" />}>
+              <NotificationDropdownMenuItem
+                toolTipTitle="Mark As Unread"
+                action="unread"
+                message={n.message}
+                leftIcon={<CloseIcon className="done-icon" />}
+              >
                 {n.message}
               </NotificationDropdownMenuItem>
             ))}

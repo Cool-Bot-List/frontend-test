@@ -1,0 +1,19 @@
+$bg: #1f232e;
+$bg-accent: #484a4d;
+$text-color: #dadce1;
+$nav-size: 60px;
+$border: 1px solid #474a4d;
+$border-radius: 8px;
+$speed: 500ms;
+$card: #293042;
+$background: #181b24;
+
+.MuiPaper-root {
+  background-color: transparent;
+}
+
+@mixin desktop {
+  @media (min-width: 600px) {
+    @content;
+  }
+}

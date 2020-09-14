@@ -1,27 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif !important;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #191a1d;
+  background-color: #181b24;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 button {
-  text-transform: none !important;
+  text-transform: none;
 }
 
 :root {
-  --bg: #242528;
+  --bg: #1f232e;
   --bg-accent: #484a4d;
   --text-color: #dadce1;
   --nav-size: 60px;
   --border: 1px solid #474a4d;
   --border-radius: 8px;
   --speed: 500ms;
+  --card: #293042;
+  --background: #181b24;
 }
 
 ul {
@@ -39,7 +43,6 @@ a {
   height: var(--nav-size);
   background-color: var(--bg);
   padding: 0 1rem;
-  border-bottom: var(--border);
 }
 
 .navbar-nav {
@@ -47,6 +50,20 @@ a {
   height: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.navbar-nav a {
+  color: #dadada;
+  flex: 1;
+  justify-self: flex-end;
+  align-self: center;
+  font-weight: bold;
+  font-size: 25px;
+  min-width: 200px;
+}
+
+.navbar-nav a:hover {
+  color: white;
 }
 
 .nav-item {
@@ -57,31 +74,31 @@ a {
 }
 
 .icon-button {
-  --button-size: calc(var(--nav-size) * 0.7) !important;
-  width: var(--button-size) !important;
-  height: var(--button-size) !important;
-  font-size: 24px !important;
-  background-color: #373939 !important;
-  border-radius: 50% !important;
-  padding: 3px !important;
-  margin: 3px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  transition: 300ms !important;
+  --button-size: calc(var(--nav-size) * 0.7);
+  width: var(--button-size);
+  height: var(--button-size);
+  font-size: 24px;
+  background-color: var(--card);
+  border-radius: 50%;
+  padding: 3px;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
 }
 
 .icon-button:hover {
   /*   
   filter: brightness(1.3); */
-  background-color: #4c4d4d !important;
+  background-color: #4c4d4d;
 }
 
 .button {
   margin-top: 2rem;
   margin-left: 2rem;
   padding: 10px 30px;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 27px;
   border: 2px solid white;
@@ -135,31 +152,31 @@ a {
   overflow-y: auto;
 }
 .te {
-  font-weight: 700 !important;
-  height: 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  border-radius: var(--border-radius) !important;
-  transition: background var(--speed) !important;
-  padding: 0.5rem !important;
-  color: white !important;
+  font-weight: 700;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+  color: white;
 }
 .te:hover {
-  background-color: #525357 !important;
+  background-color: #525357;
 }
 .menu-item {
-  font-weight: 700 !important;
-  height: 66px !important;
-  display: flex !important;
-  align-items: center !important;
-  border-radius: var(--border-radius) !important;
-  transition: background var(--speed) !important;
-  padding: 0.5rem !important;
-  color: white !important;
+  font-weight: 700;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+  color: white;
 }
 
 .menu-item:hover {
-  background-color: #525357 !important;
+  background-color: #525357;
 }
 
 .icon-right {
@@ -200,17 +217,17 @@ a {
 }
 
 .circle {
-  margin-right: 10px !important;
+  margin-right: 10px;
 }
 /* 
 .test-color {
 
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.5) ;
 } */
 .MuiChip-outlinedPrimary {
-  color: #90caf9 !important;
-  border: 1px solid #90caf9 !important;
+  color: #90caf9;
+  border: 1px solid #90caf9;
 }
 .MuiChip-deleteIconOutlinedColorPrimary {
-  color: rgba(144, 202, 249, 0.7) !important;
+  color: rgba(144, 202, 249, 0.7);
 }
