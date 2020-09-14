@@ -10,6 +10,10 @@ $background: #181b24;
 
 .MuiPaper-root {
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
 }
 
 @mixin desktop {

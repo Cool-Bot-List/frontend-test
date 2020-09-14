@@ -4,6 +4,7 @@ import { ClickAwayListener, Drawer, IconButton } from "@material-ui/core";
 import { ReactComponent as HamBurgerIcon } from "../../assets/hamburger.svg";
 import { ReactComponent as CloseIcon } from "../../assets/x.svg";
 import { ReactComponent as RightArrowIcon } from "../../assets/right-arrow-icon.svg";
+import { ReactComponent as NotificationIcon } from "../../assets/notification-icon.svg";
 import "./index.scss";
 
 const avatarUrl = "https://cdn.discordapp.com/avatars/408080307603111936/fdb086b732e630a22095de8b26fea242.png?size=2048";
@@ -38,12 +39,17 @@ export const MobilePage = () => {
               </ul>
               <ul></ul>
             </nav>
-            <div className="container">
-              <div className="mobile-nav-card">
-                <img src={avatarUrl} />
-                <h1>Profile</h1>
-                <RightArrowIcon className="right-arrow-icon" />
-              </div>
+
+            <div className="mobile-nav-card" id="mobile-nav-card-profile">
+              <img src={avatarUrl} className="mobile-nav-card-icon" />
+              <h1>Profile</h1>
+              <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
+            </div>
+
+            <div className="mobile-nav-card" id="mobile-nav-card-notifications">
+              <NotificationIcon className="mobile-nav-card-icon" id="noti-icon" />
+              <h1>Notis</h1>
+              <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
             </div>
           </div>
         </ClickAwayListener>
