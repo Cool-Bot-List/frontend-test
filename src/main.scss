@@ -7,6 +7,8 @@ $border-radius: 8px;
 $speed: 500ms;
 $card: #293042;
 $background: #181b24;
+$text-color: white;
+$text-hover-color: darken($text-color, 10%);
 
 .MuiPaper-root {
   background-color: transparent;

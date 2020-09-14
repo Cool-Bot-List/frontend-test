@@ -18,6 +18,7 @@
     min-width: 150px;
 
     &:hover {
+      color: $text-hover-color;
       cursor: pointer;
     }
   }
@@ -51,12 +52,22 @@
   }
 
   h1 {
-    color: white;
+    color: $text-color;
+
+    &:hover {
+      cursor: pointer;
+      color: $text-hover-color;
+    }
   }
 }
 
 .close-icon {
+  fill: green;
   margin-left: 100px;
+
+  &:hover {
+    fill: $text-hover-color;
+  }
 }
 
 .mobile-nav-card {
@@ -109,17 +120,17 @@
 }
 
 #mobile-nav-card-profile h1 {
-  margin: 25px;
+  margin: 15px;
 }
 
 #mobile-nav-card-notifications h1 {
-  margin: 45px;
+  margin: 30px;
 }
 
 #mobile-nav-card-browse h1 {
-  margin: 50px;
+  margin: 30px;
 }
 
 #mobile-nav-card-docs h1 {
-  margin: 60px;
+  margin: 40px;
 }
