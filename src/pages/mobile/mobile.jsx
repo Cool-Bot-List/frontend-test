@@ -5,6 +5,9 @@ import { ReactComponent as HamBurgerIcon } from "../../assets/hamburger.svg";
 import { ReactComponent as CloseIcon } from "../../assets/x.svg";
 import { ReactComponent as RightArrowIcon } from "../../assets/right-arrow-icon.svg";
 import { ReactComponent as NotificationIcon } from "../../assets/notification-icon.svg";
+import { ReactComponent as BrowseIcon } from "../../assets/browse-icon.svg";
+import { ReactComponent as DocsIcon } from "../../assets/docs-icon.svg";
+
 import "./index.scss";
 
 const avatarUrl = "https://cdn.discordapp.com/avatars/408080307603111936/fdb086b732e630a22095de8b26fea242.png?size=2048";
@@ -42,15 +45,25 @@ export const MobilePage = () => {
 
             <div className="mobile-nav-card-container">
               <div className="mobile-nav-card" id="mobile-nav-card-profile">
-                <img src={avatarUrl} className="mobile-nav-card-icon" />
+                <img src={avatarUrl} className="mobile-nav-card-icon" id="mobile-nav-card-profile-icon" />
                 <h1>Profile</h1>
                 <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
               </div>
 
               <div className="mobile-nav-card" id="mobile-nav-card-notifications">
-                <NotificationIcon className="mobile-nav-card-icon" id="noti-icon" />
+                <NotificationIcon className="mobile-nav-card-icon" id="mobile-nav-card-noti-icon" />
                 <h1>Notis</h1>
                 <RightArrowIcon className="mobile-nav-card-right-arrow-icon" />
+              </div>
+
+              <div className="mobile-nav-card" id="mobile-nav-card-browse">
+                <BrowseIcon className="mobile-nav-card-icon" id="mobile-nav-card-browse-icon" />
+                <h1>Browse</h1>
+              </div>
+
+              <div className="mobile-nav-card" id="mobile-nav-card-docs">
+                <DocsIcon className="mobile-nav-card-icon" id="mobile-nav-card-docs-icon" />
+                <h1>Docs</h1>
               </div>
             </div>
           </div>
